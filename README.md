@@ -1,6 +1,6 @@
 # ReactLazy 📁
 
-How to use Routing
+How to use Routing with lazy load
 
 - This project was generated with [Vite](https://vitejs.dev/guide/) version 5.3.1
 ```bash
