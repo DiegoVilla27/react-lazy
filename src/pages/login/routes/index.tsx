@@ -1,7 +1,11 @@
-import LoginPage from "..";
+import { lazy } from "react";
 import PublicRouteGuard from "../../../guards/noauth";
+import { RouteObject } from "react-router-dom";
 
-const LoginPageRoutes = {
+// LAZY
+const LoginPage = lazy(() => import("../index"));
+
+const LoginPageRoutes: RouteObject = {
   path: "/login",
   element: (
     <PublicRouteGuard>

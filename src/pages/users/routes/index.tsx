@@ -1,8 +1,12 @@
-import UsersPage from "..";
+import { lazy } from "react";
 import PrivateRouteGuard from "../../../guards/auth";
-import UserPage from "../pages/user";
+import { RouteObject } from "react-router-dom";
 
-const UsersPageRoutes = {
+// LAZY
+const UsersPage = lazy(() => import("../index"));
+const UserPage = lazy(() => import("../pages/user"));
+
+const UsersPageRoutes: RouteObject = {
   path: "users",
   element: (
     <PrivateRouteGuard>
